@@ -1,0 +1,404 @@
+{
+  "celebrities": [
+    {
+      "name": "Robin Williams",
+      "bio": "Actor"
+    },
+    {
+      "name": "Pharrell Williams",
+      "bio": "Singer and producer"
+    },
+    {
+      "name": "Justin Bieber",
+      "bio": "Singer and songwriter"
+    },
+    {
+      "name": "Whitney Houston",
+      "bio": "Singer and actress"
+    },
+    {
+      "name": "Barack Obama",
+      "bio": "Former President of the United States of America"
+    },
+    {
+      "name": "Carl Sagan",
+      "bio": "Astronomer and author"
+    },
+    {
+      "name": "Aretha Franklin",
+      "bio": "Singer and actress"
+    },
+    {
+      "name": "James Brown",
+      "bio": "Singer and songwriter"
+    },
+    {
+      "name": "Anna Wintour",
+      "bio": "Journalist and fashion editor"
+    },
+    {
+      "name": "River Phoenix",
+      "bio": "Actor and musician"
+    },
+    {
+      "name": "Henry Mancini",
+      "bio": "Composer and conductor"
+    },
+    {
+      "name": "Drew Barrymore",
+      "bio": "Actress and author"
+    },
+    {
+      "name": "Meryl Streep",
+      "bio": "Actress"
+    },
+    {
+      "name": "Tina Turner",
+      "bio": "Singer and songwriter"
+    },
+    {
+      "name": "Sonny Bono",
+      "bio": "Singer and politician"
+    },
+    {
+      "name": "Stevie Wonder",
+      "bio": "Singer and record producer"
+    },
+    {
+      "name": "Nelson Mandela",
+      "bio": "Former President of South Africa"
+    },
+    {
+      "name": "Brian Wilson",
+      "bio": "Co-founder of the Beach Boys"
+    },
+    {
+      "name": "Charlie Sheen",
+      "bio": "Actor"
+    },
+    {
+      "name": "Martin Sheen",
+      "bio": "Actor"
+    },
+    {
+      "name": "Mariah Carey",
+      "bio": "Singer and songwriter"
+    },
+    {
+      "name": "Amy Winehouse",
+      "bio": "Singer and songwriter"
+    },
+    {
+      "name": "Bob Dylan",
+      "bio": "Singer, songwriter and author"
+    },
+    {
+      "name": "Neil Young",
+      "bio": "Musician and activist"
+    },
+    {
+      "name": "Carl Lewis",
+      "bio": "Track and field athlete"
+    },
+    {
+      "name": "Judy Garland",
+      "bio": "Actress and singer"
+    },
+    {
+      "name": "Ray Charles",
+      "bio": "Singer, pianist and composer"
+    },
+    {
+      "name": "Celine Dion",
+      "bio": "Singer"
+    },
+    {
+      "name": "Karl Lagerfled",
+      "bio": "Fashion designer"
+    },
+    {
+      "name": "Kate Spade",
+      "bio": "Fashion designer"
+    },
+    {
+      "name": "Nate Dogg",
+      "bio": "Rapper and songwriter"
+    },
+    {
+      "name": "Hulk Hogan",
+      "bio": "Wrestler, actor and television personality"
+    },
+    {
+      "name": "Diego Maradonna",
+      "bio": "Argentinian soccer player and coach"
+    },
+    {
+      "name": "Philip Seymour Hoffman",
+      "bio": "Actor, director and producer"
+    },
+    {
+      "name": "Elton John",
+      "bio": "Singer, pianist and songwriter"
+    },
+    {
+      "name": "Adam West",
+      "bio": "Actor, playing Batman on television"
+    },
+    {
+      "name": "Heath Ledger",
+      "bio": "Australian actor"
+    },
+    {
+      "name": "Paul Hogan",
+      "bio": "Australian comedian and actor"
+    },
+    {
+      "name": "Brian Blessed",
+      "bio": "English actor and singer"
+    },
+    {
+      "name": "Angela Lansbury",
+      "bio": "Television and stage actress"
+    },
+    {
+      "name": "John Goodman",
+      "bio": "Actor and singer"
+    },
+    {
+      "name": "Tammy Wynette",
+      "bio": "Country music singer and songwriter"
+    },
+    {
+      "name": "Hunter S. Thompson",
+      "bio": "Journalist and author"
+    },
+    {
+      "name": "Kofi Annan",
+      "bio": "Diplomat and Secretary General of the United Nations"
+    },
+    {
+      "name": "Freddie Mercury",
+      "bio": "Singer and songwriter"
+    },
+    {
+      "name": "Carlos Santana",
+      "bio": "Guitarist"
+    },
+    {
+      "name": "George Takei",
+      "bio": "Actor and activist"
+    },
+    {
+      "name": "Dizzie Gillespie",
+      "bio": "Jazz trumpeter and composer"
+    },
+    {
+      "name": "Chuck Berry",
+      "bio": "Singer, songwriter, and guiatarist"
+    },
+    {
+      "name": "Neil Armstrong",
+      "bio": "First man to walk on the Moon"
+    },
+    {
+      "name": "Grant Imahara",
+      "bio": "Television host and roboticist"
+    },
+    {
+      "name": "John Lewis",
+      "bio": "American civil rights leader and politician"
+    },
+    {
+      "name": "Rosa Parks",
+      "bio": "American civil rights activist"
+    },
+    {
+      "name": "Roald Dahl",
+      "bio": "Children's author"
+    },
+    {
+      "name": "Julio Iglesias",
+      "bio": "Singer and songwriter"
+    },
+    {
+      "name": "James Earl Jones",
+      "bio": "Actor and voiceover artist"
+    },
+    {
+      "name": "Nina Simone",
+      "bio": "Singer and songwriter"
+    },
+    {
+      "name": "Nichelle Nichols",
+      "bio": "Actress, played Uhura in Star Trek"
+    },
+    {
+      "name": "Leonard Nimoy",
+      "bio": "Actor, played Spock in Star Trek"
+    },
+    {
+      "name": "Harvey Milk",
+      "bio": "American politician"
+    },
+    {
+      "name": "Diana Ross",
+      "bio": "Singer and acress"
+    },
+    {
+      "name": "Donna Summer",
+      "bio": "Singer, songwriter and actress"
+    },
+    {
+      "name": "Maya Angelou",
+      "bio": "Poet and civil rights activist"
+    },
+    {
+      "name": "Merlene Ottey",
+      "bio": "Jamaican track and field athlete"
+    },
+    {
+      "name": "Florence Griffith Joyner",
+      "bio": "American track and field athlete"
+    },
+    {
+      "name": "Clarence Thomas",
+      "bio": "Supreme Court Justice in the United States"
+    },
+    {
+      "name": "Thurgood Marshall",
+      "bio": "American lawyer and civil rights activist"
+    },
+    {
+      "name": "Madeleine Albright",
+      "bio": "Politician, first female Secretary of State in the USA"
+    },
+    {
+      "name": "Sally Ride",
+      "bio": "First American woman in space"
+    },
+    {
+      "name": "Mae Jemison",
+      "bio": "Astronaut, first African American woman in space"
+    },
+    {
+      "name": "Edwin Moses",
+      "bio": "American track and field athlete in the 1970s and 1980s"
+    },
+    {
+      "name": "Barry Bonds",
+      "bio": "Baseball player, notably for the San Francisco Giants"
+    },
+    {
+      "name": "Kobe Bryant",
+      "bio": "American basketball player with the Los Angeles Lakers"
+    },
+    {
+      "name": "Roy Scheider",
+      "bio": "Actor, played Chief Brody in Jaws"
+    },
+    {
+      "name": "Miles Davis",
+      "bio": "Jazz trumpeter and composer"
+    },
+    {
+      "name": "Ziggy Marley",
+      "bio": "Jamaican musician"
+    },
+    {
+      "name": "Mikhail Gorbachev",
+      "bio": "Russian politician, last leader of the Soviet Union"
+    },
+    {
+      "name": "Pervez Musharraf",
+      "bio": "Tenth President of Pakistan"
+    },
+    {
+      "name": "Marc Bolan",
+      "bio": "Singer, songwriter and poet"
+    },
+    {
+      "name": "Grace Jones",
+      "bio": "Singer, actress and model"
+    },
+    {
+      "name": "Clem Burke",
+      "bio": "Drummer with Blondie and The Ramones"
+    },
+    {
+      "name": "Joan Jett",
+      "bio": "Singer, songwriter and actress"
+    },
+    {
+      "name": "Maurice Gibb",
+      "bio": "Singer and songwriter with the Bee Gees"
+    },
+    {
+      "name": "Barry Gibb",
+      "bio": "Singer and songwriter with the Bee Gees"
+    },
+    {
+      "name": "Robin Gibb",
+      "bio": "Singer and songwriter with the Bee Gees"
+    },
+    {
+      "name": "Olivia Newton-John",
+      "bio": "Singer, songwriter and actress"
+    },
+    {
+      "name": "Gene Cernan",
+      "bio": "Astronaut, last man to walk on the Moon"
+    },
+    {
+      "name": "John DeLorean",
+      "bio": "Inventor, car industry executive"
+    },
+    {
+      "name": "Zsa Zsa Gabor",
+      "bio": "Actress and socialite"
+    },
+    {
+      "name": "Patricia Arquette",
+      "bio": "Actress"
+    },
+    {
+      "name": "Lisa Lopes",
+      "bio": "Singer and wrapper, known as \"Left Eye\""
+    },
+    {
+      "name": "Missy Elliott",
+      "bio": "Rapper, songwriter and record producer"
+    },
+    {
+      "name": "Chuck D",
+      "bio": "Rapper, co-founder of Public Enemy"
+    },
+    {
+      "name": "Kenny Rogers",
+      "bio": "Singer and songwriter"
+    },
+    {
+      "name": "Donald Sutherland",
+      "bio": "Canadian film actor"
+    },
+    {
+      "name": "Liza Minnelli",
+      "bio": "Actress and singer"
+    },
+    {
+      "name": "Frank Sinatra",
+      "bio": "Singer, actor and producer"
+    },
+    {
+      "name": "Nancy Sinatra",
+      "bio": "Singer and actress"
+    },
+    {
+      "name": "Steve Irwin",
+      "bio": "Australian television presenter and conservationist"
+    },
+    {
+      "name": "Andre the Giant",
+      "bio": "Professional wrestler and actor"
+    }
+  ]
+}
