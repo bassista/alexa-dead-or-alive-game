@@ -22,6 +22,7 @@
   "author": "Simon Prickett",
   "license": "MIT",
   "dependencies": {
+    "ask-sdk-core": "^2.10.1",
     "ioredis": "^4.19.2",
     "wikipediadeadoralive": "^1.0.1"
   }
