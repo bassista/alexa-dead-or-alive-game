@@ -1,0 +1,28 @@
+{
+  "name": "alexa-dead-or-alive-game",
+  "version": "1.0.0",
+  "description": "Alexa Dead or Alive Game",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "load": "node dataloader.js"
+  },
+  "engines": {
+    "node": ">=8.9.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "TODO"
+  },
+  "keywords": [
+    "Alexa",
+    "Dead",
+    "Alive"
+  ],
+  "author": "Simon Prickett",
+  "license": "MIT",
+  "dependencies": {
+    "ioredis": "^4.19.2",
+    "wikipediadeadoralive": "^1.0.1"
+  }
+}
