@@ -122,7 +122,6 @@ const run = async () => {
 
         if (response) {
           if (response.correct) {
-            // TODO increment user score...
             console.log('User was right!');
           } else {
             console.log('User was wrong!');
