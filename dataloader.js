@@ -1,23 +1,13 @@
-const Redis = require('ioredis');
+const { getRedisClient, getPrefixedKey } = require('./redis');
 const dataset = require('./dataset.json');
 
-const redisConf = {
-  port: process.env.REDIS_PORT || 6379,
-  host: process.env.REDIS_HOST || 'localhost'
-};
-
-const KEY_PREFIX = 'doa';
-
-if (process.env.REDIS_PASSWORD) {
-  redisConf.password = process.env.REDIS_PASSWORD;
-}
 
 const loadData = async () => {
-  const redis = new Redis(redisConf);
+  const redis = getRedisClient();
   const pipeline = redis.pipeline();
   
   // Delete the celebrities set.
-  const celebritySetKey = `${KEY_PREFIX}:celebrities`;
+  const celebritySetKey = getPrefixedKey('celebrities');
   pipeline.del(celebritySetKey);
   
   // Populate celebrities set and hashes.
@@ -25,7 +15,7 @@ const loadData = async () => {
     console.log(`Loading ${celebrity.name}...`);
     const celebrityName = celebrity.name.replace(/ /g, '_');
     pipeline.sadd(celebritySetKey, celebrityName);
-    pipeline.hmset(`${KEY_PREFIX}:${celebrityName}`, celebrity);
+    pipeline.hmset(getPrefixedKey(celebrityName), celebrity);
   }
   
   await pipeline.exec();
