@@ -5,6 +5,7 @@ const redis = getRedisClient();
 const EXPIRY_TIME = 60 * 60 * 24;
 
 const CELEBRITIES_KEY = 'celebrities';
+const CURRENT_KEY = 'current';
 
 const getCelebStatus = async (celeb) => {
   // Check for cached result.
@@ -41,12 +42,34 @@ const setupNewGame = async (userId, numCelebs) => {
     numUserCelebs = await redis.scard(userSetKeyName);
   } while (numUserCelebs < numCelebs);
 
+  // TODO set a long expire on userSetKeyName so it naturally
+  // dies off if the the user abandons the game.
+
   return true;
 };
 
 const getRandomCeleb = async (userId) => {
   const randomCeleb = await redis.spop(getKeyName(userId, CELEBRITIES_KEY));
+  
+  if (randomCeleb) {
+    redis.setex(getKeyName(userId, CURRENT_KEY), EXPIRY_TIME, randomCeleb);
+  }
+
   return randomCeleb;
+};
+
+const validateAnswer = async (userId, isDead) => {
+  // Get the current celeb for this user
+  // Are they dead?
+  // Return the celeb data and whether the user got this right or wrong...
+};
+
+const cleanupGame = async (userId) => {
+  const pipeline = redis.pipeline();
+
+  pipeline.del(getKeyName(userId, CURRENT_KEY));
+  pipeline.del(getKeyName(userId, CELEBRITIES_KEY));
+  pipeline.exec();
 };
 
 const run = async () => {
@@ -66,6 +89,7 @@ const run = async () => {
     } while (currentCeleb);
 
     console.log('All done!');
+    cleanupGame(998);
   }
 
   redis.quit();
