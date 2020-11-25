@@ -1,7 +1,6 @@
 const { getRedisClient, getPrefixedKey } = require('./redis');
 const dataset = require('./dataset.json');
 
-
 const loadData = async () => {
   const redis = getRedisClient();
   const pipeline = redis.pipeline();
