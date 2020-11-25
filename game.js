@@ -42,8 +42,12 @@ const setupNewGame = async (userId, numCelebs) => {
     numUserCelebs = await redis.scard(userSetKeyName);
   } while (numUserCelebs < numCelebs);
 
-  // TODO set a long expire on userSetKeyName so it naturally
-  // dies off if the the user abandons the game.
+  // Expire the user's celebrity set later, as an automatic cleanup
+  // if they abandon the game.
+  redis.expire(userSetKeyName, EXPIRY_TIME);
+
+  // TODO set user's initial score at 0, in case a previous value
+  // was still there...
 
   return true;
 };
@@ -52,6 +56,8 @@ const getRandomCeleb = async (userId) => {
   const randomCeleb = await redis.spop(getKeyName(userId, CELEBRITIES_KEY));
   
   if (randomCeleb) {
+    // Store the user's current celebrity, and expire it later, as 
+    // an automatic cleanup if they abandon the game.
     redis.setex(getKeyName(userId, CURRENT_KEY), EXPIRY_TIME, randomCeleb);
   }
 
@@ -59,9 +65,24 @@ const getRandomCeleb = async (userId) => {
 };
 
 const validateAnswer = async (userId, isDead) => {
-  // Get the current celeb for this user
-  // Are they dead?
-  // Return the celeb data and whether the user got this right or wrong...
+  // Get the current celeb for this user...
+  const celebToCheck = await redis.get(getKeyName(userId, CURRENT_KEY));
+
+  if (! celebToCheck) {
+    return null;
+  }
+
+  // Get the celeb's status...
+  const celebStatus = await getCelebStatus(celebToCheck);
+
+  if (! celebStatus) {
+    return null;
+  }
+
+  // Does the user's answer match the celeb's status?
+  celebStatus.correct = isDead === celebStatus.dead;
+
+  return celebStatus;
 };
 
 const cleanupGame = async (userId) => {
@@ -69,6 +90,7 @@ const cleanupGame = async (userId) => {
 
   pipeline.del(getKeyName(userId, CURRENT_KEY));
   pipeline.del(getKeyName(userId, CELEBRITIES_KEY));
+  // TODO delete user's score key
   pipeline.exec();
 };
 
@@ -79,13 +101,29 @@ const run = async () => {
 
   if (gameEstablished) {
     let currentCeleb;
+    let userGuess = true;
 
     do {
       currentCeleb = await getRandomCeleb(998);
       if (currentCeleb) {
-        const celebStatus = await getCelebStatus(currentCeleb);
-        console.log(celebStatus);
+        console.log(currentCeleb);
+        console.log(`user guess ${userGuess ? 'dead': 'alive'}`);
+
+        const response = await validateAnswer(998, userGuess);
+
+        if (response) {
+          if (response.correct) {
+            // TODO increment user score...
+            console.log('User was right!');
+          } else {
+            console.log('User was wrong!');
+          }
+
+          console.log(response.description);
+        }
       }
+
+      userGuess = !userGuess;
     } while (currentCeleb);
 
     console.log('All done!');
