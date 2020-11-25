@@ -1,4 +1,4 @@
-const { getRedisClient, getPrefixedKey } = require('./redis');
+const { getRedisClient, getKeyName } = require('./redis');
 const dataset = require('./dataset.json');
 
 const loadData = async () => {
@@ -6,7 +6,7 @@ const loadData = async () => {
   const pipeline = redis.pipeline();
   
   // Delete the celebrities set.
-  const celebritySetKey = getPrefixedKey('celebrities');
+  const celebritySetKey = getKeyName('celebrities');
   pipeline.del(celebritySetKey);
   
   // Populate celebrities set and hashes.
@@ -14,7 +14,7 @@ const loadData = async () => {
     console.log(`Loading ${celebrity.name}...`);
     const celebrityName = celebrity.name.replace(/ /g, '_');
     pipeline.sadd(celebritySetKey, celebrityName);
-    pipeline.hmset(getPrefixedKey(celebrityName), celebrity);
+    pipeline.hmset(getKeyName(celebrityName), celebrity);
   }
   
   await pipeline.exec();
