@@ -1,7 +1,7 @@
 {
-  "name": "alexa-dead-or-alive-game",
+  "name": "alexa-dead-or-alive-game-data-loader",
   "version": "1.0.0",
-  "description": "Alexa Dead or Alive Game",
+  "description": "Alexa Dead or Alive Game Data Loader",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -14,16 +14,10 @@
     "type": "git",
     "url": "https://github.com/simonprickett/alexa-dead-or-alive-game.git"
   },
-  "keywords": [
-    "Alexa",
-    "Dead",
-    "Alive"
-  ],
+  "keywords": [],
   "author": "Simon Prickett",
   "license": "MIT",
   "dependencies": {
-    "ask-sdk-core": "^2.10.1",
-    "ioredis": "^4.19.2",
-    "wikipediadeadoralive": "^1.0.3"
+    "ioredis": "^4.19.2"
   }
 }

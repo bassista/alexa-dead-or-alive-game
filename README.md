@@ -10,6 +10,8 @@ TODO
 $ git clone https://github.com/simonprickett/alexa-dead-or-alive-game.git
 $ cd alexa-dead-or-alive-game
 $ npm install
+$ cd dataloader
+$ npm install
 ```
 
 TODO other stuff
@@ -46,3 +48,9 @@ $ redis-cli hgetall doa:Carl_Sagan
 ```
 
 You'll likely get a different result from `srandmember` as it picks a random set member, but just feed the result of that into `hgetall` and make sure that a celebrity hash is returned.
+
+If you're using a Redis instance that isn't hosted locally, be sure to specify your hostname, user and password as necessary when starting `redis-cli`, for example:
+
+```bash
+$ redis-cli -h somehost -p 9999 -a secretpassword
+```
