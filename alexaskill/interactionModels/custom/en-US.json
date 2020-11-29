@@ -1,0 +1,91 @@
+{
+  "interactionModel": {
+    "languageModel": {
+      "invocationName": "dead or alive",
+      "intents": [
+        {
+          "name": "AMAZON.CancelIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.HelpIntent",
+          "samples": [
+            "what does this do",
+            "what can you do",
+            "help me",
+            "how to play",
+            "how do i play the game",
+            "instructions",
+            "help"
+          ]
+        },
+        {
+          "name": "AMAZON.StopIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.NavigateHomeIntent",
+          "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "StartGameIntent",
+          "slots": [],
+          "samples": [
+            "let\u0027s begin a game",
+            "start a new game",
+            "new game",
+            "play dead or alive",
+            "start",
+            "play",
+            "let\u0027s begin",
+            "let\u0027s play",
+            "let\u0027s go",
+            "start a game"
+          ]
+        },
+        {
+          "name": "AnswerDeadIntent",
+          "slots": [],
+          "samples": [
+            "passed",
+            "passed on",
+            "passed away",
+            "she died",
+            "died",
+            "he died",
+            "croaked",
+            "she\u0027s dead",
+            "he\u0027s dead",
+            "they\u0027re dead",
+            "dead"
+          ]
+        },
+        {
+          "name": "AnswerAliveIntent",
+          "slots": [],
+          "samples": [
+            "around",
+            "still around",
+            "living",
+            "alive",
+            "she\u0027s alive",
+            "he\u0027s alive",
+            "still living",
+            "they\u0027re alive"
+          ]
+        }
+      ],
+      "types": [],
+      "modelConfiguration": {
+        "fallbackIntentSensitivity": {
+          "level": "LOW"
+        }
+      }
+    }
+  },
+  "version": "5"
+}

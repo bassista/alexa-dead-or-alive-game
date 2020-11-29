@@ -1,0 +1,19 @@
+{
+  "name": "deadoralive",
+  "version": "1.0.0",
+  "description": "Dead or Alive celebrity game.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Simon Prickett",
+  "license": "MIT",
+  "dependencies": {
+    "ask-sdk-core": "^2.7.0",
+    "ask-sdk-model": "^1.19.0",
+    "aws-sdk": "^2.326.0",
+    "wikipediadeadoralive": "^1.0.4",
+    "dotenv": "^8.2.0",
+    "ioredis": "^4.19.2"
+  }
+}
