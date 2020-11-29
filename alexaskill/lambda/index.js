@@ -11,7 +11,7 @@ const CURRENT_CELEB_KEY = 'currentCeleb';
 const SCORE_KEY = 'score';
 const KEY_PREFIX = 'doa';
 const KEY_SEPARATOR = ':';
-const NUM_ROUNDS = 3;
+const NUM_ROUNDS = 10;
 const HELP_TEXT = `Hi there - I'm a celebrity dead or alive game... ask me to start a new game and I'll ask you whether ${NUM_ROUNDS} celebrities are dead or alive, and keep track of how many you get right. Sound like fun? Let's go!`;
 
 const redisConf = {
