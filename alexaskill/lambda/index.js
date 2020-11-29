@@ -161,7 +161,7 @@ const handleDeadOrAliveAnswer = async (handlerInput, userSaidDead) => {
                 speakOutput = 'Correct!';
                 
                 if (userSaidDead) {
-                    speakOutput = `${speakOutput} died in ${result.died}.`;
+                    speakOutput = `${speakOutput} ${result.name} died in ${result.died}.`;
                 }
                 
                 speakOutput = `${speakOutput} ${result.description}`;
