@@ -1,8 +1,6 @@
 # Alexa Dead or Alive Game
 
-This is a celebrity dead or alive game for Alexa that uses Redis as a data store and cache.  
-
-TODO describe game...
+This is a celebrity dead or alive game for Alexa that uses Redis as a data store and cache.  Check out the [article on my website](https://simonprickett.dev/alexa-redis-dead-or-alive/) for more details.
 
 Read about the npm package that I wrote to scrape dead or alive information from Wikipedia [here](https://simonprickett.dev/wikipedia-dead-or-alive/).
 
